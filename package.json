@@ -1,0 +1,29 @@
+{
+  "name": "test-ci2",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Dmitry1809/test-ci2#readme",
+  "bugs": {
+    "url": "https://github.com/Dmitry1809/test-ci2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Dmitry1809/test-ci2.git"
+  },
+  "license": "ISC",
+  "author": "dmitry1809",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.5",
+    "jest": "^30.3.0"
+  },
+  "dependencies": {
+    "core-js": "^3.49.0"
+  }
+}
