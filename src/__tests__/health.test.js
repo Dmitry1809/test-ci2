@@ -1,3 +1,4 @@
+/* global test, expect */
 import { getHealthStatus } from '../health.js';
 
 test.each([
@@ -10,3 +11,39 @@ test.each([
   const result = getHealthStatus(character);
   expect(result).toBe(expected);
 });
+
+
+
+import { sortCharactersByHealth } from '../health.js';
+
+test('should sort characters by health in descending order', () => {
+  const input = [
+    { name: 'мечник', health: 10 },
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+  ];
+
+  const expected = [
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'мечник', health: 10 },
+  ];
+
+  const result = sortCharactersByHealth(input);
+
+  // Используем toEqual для глубокого сравнения объектов/массивов
+  expect(result).toEqual(expected);
+});
+
+test('should not change the original array', () => {
+  const input = [
+    { name: 'мечник', health: 10 },
+    { name: 'маг', health: 100 },
+  ];
+  const inputCopy = [...input];
+  
+  sortCharactersByHealth(input);
+  
+  expect(input).toEqual(inputCopy);
+});
+
