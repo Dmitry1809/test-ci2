@@ -15,12 +15,16 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@babel/cli": "^7.28.6",
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.5",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^8.57.1",
+    "globals": "^17.6.0",
     "jest": "^30.3.0"
   },
   "dependencies": {
